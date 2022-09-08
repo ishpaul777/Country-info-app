@@ -11,7 +11,6 @@ const CountryCards = (props) => {
   const {
     name, population, continents, subregion,
   } = props;
-  // console.log(props);
   return (
     <Link
       to={`/countries/${name}`}
@@ -84,7 +83,8 @@ const CountryCards = (props) => {
 
 CountryCards.propTypes = {
   name: PropTypes.string.isRequired,
-  subregion: PropTypes.string.isRequired,
+  // eslint-disable-next-line react/require-default-props
+  subregion: PropTypes.string,
   population: PropTypes.number.isRequired,
   continents: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
