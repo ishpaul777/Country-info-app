@@ -16,55 +16,46 @@ export default function countriesReducer(state = [], action) {
 }
 
 export const getCountriesFromServer = (filter) => async (dispatch) => {
-  try {
-    const response = await fetch(`https://restcountries.com/v3.1/${filter}`);
-    const data = await response.json();
-    // console.log(data);
-    const countries = data.map((country) => ({
-      name: country.name.common,
-      flag: country.flags.png,
-      population: country.population,
-      capital: country.capital,
-      continents: country.continents,
-      subregion: country.subregion,
-      languages: country.languages,
-      nativeName: country.name.nativeName,
-      topLevelDomain: country.tld,
-      currencies: country.currencies,
-    }));
-    const sortedCountries = countries.sort((a, b) => a.name.localeCompare(b.name));
-    dispatch({
-      type: SET_COUNTRIES,
-      payload: sortedCountries,
-    });
-  } catch (err) {
-    alert('error loading countries');
-  }
+  const response = await fetch(`https://restcountries.com/v3.1/${filter}`);
+  const data = await response.json();
+  // console.log(data);
+  const countries = data.map((country) => ({
+    name: country.name.common,
+    flag: country.flags.png,
+    population: country.population,
+    capital: country.capital,
+    continents: country.continents,
+    subregion: country.subregion,
+    languages: country.languages,
+    nativeName: country.name.nativeName,
+    topLevelDomain: country.tld,
+    currencies: country.currencies,
+  }));
+  const sortedCountries = countries.sort((a, b) => a.name.localeCompare(b.name));
+  dispatch({
+    type: SET_COUNTRIES,
+    payload: sortedCountries,
+  });
 };
 
 export const searchCountries = (countryName) => async (dispatch) => {
-  try {
-    const response = await fetch(`https://restcountries.com/v3.1/name/${countryName}`);
-    const data = await response.json();
-    const countries = data.map((country) => ({
-      name: country.name.common,
-      flag: country.flags.png,
-      population: country.population,
-      capital: country.capital,
-      continents: country.continents,
-      subregion: country.subregion,
-      languages: country.languages,
-      nativeName: country.name.nativeName,
-      topLevelDomain: country.tld,
-      currencies: country.currencies,
-    }));
-    const sortedCountries = countries.sort((a, b) => a.name.localeCompare(b.name));
-    dispatch({
-      type: SEARCH_COUNTRIES,
-      payload: sortedCountries,
-    });
-  } catch (err) {
-    // alert('')
-    alert('Sorry developer is still learning or you enter a invalid name of country!!');
-  }
+  const response = await fetch(`https://restcountries.com/v3.1/name/${countryName}`);
+  const data = await response.json();
+  const countries = data.map((country) => ({
+    name: country.name.common,
+    flag: country.flags.png,
+    population: country.population,
+    capital: country.capital,
+    continents: country.continents,
+    subregion: country.subregion,
+    languages: country.languages,
+    nativeName: country.name.nativeName,
+    topLevelDomain: country.tld,
+    currencies: country.currencies,
+  }));
+  const sortedCountries = countries.sort((a, b) => a.name.localeCompare(b.name));
+  dispatch({
+    type: SEARCH_COUNTRIES,
+    payload: sortedCountries,
+  });
 };
