@@ -1,4 +1,4 @@
-:root {
+/* :root {
   --select-options-navbar-main-color: white;
 }
 
@@ -34,4 +34,41 @@
 
 .css-6hp17o-MuiList-root-MuiMenu-list {
   background-color: #2b3945 !important;
+} */
+:root {
+  --select-options-navbar-main-color: white;
+}
+
+.select-options-navbar-main-color div {
+  background-color: #ec4c8a !important;
+  text-align: left !important;
+  color: var(--select-options-navbar-main-color) !important;
+}
+
+.select-options-navbar-main-color::before {
+  border-color: var(--select-options-navbar-main-color) !important;
+}
+
+.select-options-navbar-main-color::after {
+  border-color: var(--select-options-navbar-main-color) !important;
+}
+
+.select-options-navbar-main-color:not(.Mui-disabled):hover::before {
+  border-color: var(--select-options-navbar-main-color) !important;
+}
+
+.select-options-navbar-main-color svg {
+  fill: var(--select-options-navbar-main-color) !important;
+}
+
+.css-uigbjl-MuiButtonBase-root-MuiMenuItem-root.Mui-selected {
+  background-color: #ec4c8a !important;
+}
+
+.css-uigbjl-MuiButtonBase-root-MuiMenuItem-root.Mui-selected:hover {
+  background-color: #ec4c8a !important;
+}
+
+.css-6hp17o-MuiList-root-MuiMenu-list {
+  background-color: #a53560 !important;
 }

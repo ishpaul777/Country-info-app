@@ -1,14 +1,15 @@
 import React from 'react';
 import {
-  Card, CardMedia, CardContent, Typography, useTheme,
+  Card, CardContent, IconButton, Typography, useTheme,
 } from '@mui/material';
+import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
 import { Link } from 'react-router-dom';
 import { PropTypes } from 'prop-types';
 
 const CountryCards = (props) => {
   const theme = useTheme();
   const {
-    name, flag, population, continents,
+    name, population, continents, subregion,
   } = props;
   // console.log(props);
   return (
@@ -21,25 +22,36 @@ const CountryCards = (props) => {
         sx={{
           width: '20vw',
           textAlign: 'left',
+          height: '30vh',
           color: '#fff',
-          backgroundColor: 'secondary.main',
+          backgroundColor: 'primary.main',
           cursor: 'pointer',
           [theme.breakpoints.down('md')]: {
             width: '35vw',
           },
           [theme.breakpoints.down('sm')]: {
-            width: '50vw',
+            width: '48vw',
+            height: '30vh',
+            margin: '.2rem',
           },
         }}
       >
-        <CardMedia
+        {/* <CardMedia
           component="img"
           height="200"
           width="200"
           image={flag}
           alt="flag"
-        />
+        /> */}
         <CardContent>
+          <IconButton
+            sx={{
+              float: 'right',
+              p: 0,
+            }}
+          >
+            <ArrowCircleRightIcon />
+          </IconButton>
           <Typography gutterBottom variant="h5" component="h2">
             {name}
           </Typography>
@@ -57,13 +69,13 @@ const CountryCards = (props) => {
               {continents}
             </span>
           </Typography>
-          {/* <Typography variant="subtitle1" component="p" sx={{ fontWeight: 500 }}>
-            Capital:
+          <Typography variant="subtitle1" component="p" sx={{ fontWeight: 500 }}>
+            Sub Region:
             <span style={{ fontWeight: 400 }}>
               {' '}
-              {capital}
+              {subregion}
             </span>
-          </Typography> */}
+          </Typography>
         </CardContent>
       </Card>
     </Link>
@@ -72,7 +84,7 @@ const CountryCards = (props) => {
 
 CountryCards.propTypes = {
   name: PropTypes.string.isRequired,
-  flag: PropTypes.string.isRequired,
+  subregion: PropTypes.string.isRequired,
   population: PropTypes.number.isRequired,
   continents: PropTypes.arrayOf(PropTypes.string).isRequired,
 };

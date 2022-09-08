@@ -13,7 +13,10 @@ body {
     'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
-  background-color: hsl(207, 26%, 17%);
+  background-color: #a53560;
+  overflow-x: hidden;
+
+  /* background-color: hsl(207, 26%, 17; */
   -moz-osx-font-smoothing: grayscale;
 }
 
