@@ -14,8 +14,9 @@ const Navbar = () => (
   >
     <Toolbar sx={{ justifyContent: 'space-between' }}>
       <Typography variant="h5" component="h1">
-        Covid Metrics
+        Country Metrics
       </Typography>
+      {/* { FOR IMPLEMENTATION OF DARK AND LIGHT MODE IGNORE THESE */}
       {/* {
         (2 === 2)
           ? (
@@ -41,9 +42,7 @@ const Navbar = () => (
         variant="text"
         style={{ color: '#fff' }}
         startIcon={<WbSunnyIcon style={{ fill: '#fff' }} />}
-      >
-        Light
-      </Button>
+      />
     </Toolbar>
   </AppBar>
 );

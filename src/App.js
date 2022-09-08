@@ -7,15 +7,30 @@ import './App.css';
 import Homepage from './Pages/homePage';
 import DetailsPage from './Pages/detailsPage';
 
+// const theme = createTheme({
+//   palette: {
+//     primary: {
+//       main: 'hsl(207, 26%, 17%)',
+//       light: '#53636a',
+//       dark: '#1c2a30',
+//     },
+//     secondary: {
+//       main: 'hsl(209, 23%, 22%)',
+//     },
+//   },
+//   typography: {
+//     fontFamily: 'SegoeUI, Segoe UI',
+//   },
+// });
 const theme = createTheme({
   palette: {
     primary: {
-      main: 'hsl(207, 26%, 17%)',
-      light: '#53636a',
-      dark: '#1c2a30',
+      main: '#ec4c8a',
+      light: '#ef6fa1',
+      dark: '#a53560',
     },
     secondary: {
-      main: 'hsl(209, 23%, 22%)',
+      main: '#a53560',
     },
   },
   typography: {

@@ -13,8 +13,9 @@ const SearchInput = () => {
     position: 'relative',
     alignSelf: 'center',
     borderRadius: '5px',
-    background: 'hsl(209, 23%, 22%)',
-    // border: '1px solid grey',
+    // background: 'hsl(209, 23%, 22%)',
+    background: '#ec4c8a',
+    // border: '1px solid #ec4c8a',
     width: '20vw',
     [theme.breakpoints.down('md')]: {
       width: '75vw',
@@ -39,8 +40,9 @@ const SearchInput = () => {
       // vertical padding + font size from searchIcon
       //   transition: theme.transitions.create('width'),
       width: '100%',
-      '&::placeholder': {
+      '&: placeholder': {
         color: '#fff',
+        // color: '#eee',
       },
       [theme.breakpoints.down('md')]: {
         width: '70%',

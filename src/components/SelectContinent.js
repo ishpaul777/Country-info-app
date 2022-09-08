@@ -60,7 +60,6 @@ function SelectContinent({ continent }) {
             }}
           >
             Asia
-
           </MenuItem>
           <MenuItem
             value="region/america"
@@ -77,7 +76,6 @@ function SelectContinent({ continent }) {
             }}
           >
             America
-
           </MenuItem>
           <MenuItem
             value="region/europe"
@@ -113,7 +111,6 @@ function SelectContinent({ continent }) {
             }}
           >
             Oceania
-
           </MenuItem>
           <MenuItem
             value="region/africa"
