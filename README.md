@@ -16,7 +16,7 @@
 
 ## Live Demo
 
-A live version of the website can be seen [here](https://spacehubfortravelers.netlify.app//)
+A live version of the website can be seen [here](https://restcountriesinfo.netlify.app)
 
 ## 🛠 Installation & Set Up
 
