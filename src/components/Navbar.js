@@ -1,5 +1,7 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import WbSunnyIcon from '@mui/icons-material/WbSunny';
+import ArrowBackIosIcon from '@mui/icons-material/ArrowBackIos';
 // import NightlightIcon from '@mui/icons-material/Nightlight';
 import {
   AppBar, Toolbar, Typography, Button,
@@ -12,7 +14,12 @@ const Navbar = () => (
       backgroundColor: 'secondary',
     }}
   >
-    <Toolbar sx={{ justifyContent: 'space-between' }}>
+    <Toolbar sx={{ justifyContent: 'space-between', alignItems: 'center' }}>
+      <Link to="/" style={{ textDecoration: 'none' }}>
+        <Button variant="text" sx={{ color: '#fff' }}>
+          <ArrowBackIosIcon />
+        </Button>
+      </Link>
       <Typography variant="h5" component="h1">
         Country Metrics
       </Typography>

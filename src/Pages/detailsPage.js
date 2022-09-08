@@ -1,9 +1,8 @@
 import React from 'react';
 import {
-  Box, Stack, Button, Typography,
+  Box, Stack, Typography,
 } from '@mui/material';
-import { Link, useLocation } from 'react-router-dom';
-import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import { useLocation } from 'react-router-dom';
 import { useTheme } from '@emotion/react';
 
 const DetailsPage = () => {
@@ -41,11 +40,6 @@ const DetailsPage = () => {
         },
       }}
       >
-        <Link to="/" style={{ textDecoration: 'none', alignSelf: 'start', margin: '5px' }}>
-          <Button variant="contained" color="primary" startIcon={<ArrowBackIcon />}>
-            Home
-          </Button>
-        </Link>
         <Stack
           sx={{
             [theme.breakpoints.down('sm')]: {
