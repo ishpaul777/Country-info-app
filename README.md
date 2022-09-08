@@ -18,6 +18,9 @@
 
 A live version of the website can be seen [here](https://restcountriesinfo.netlify.app)
 
+## Loom Video
+[Loom Video](https://www.loom.com/share/0382a181694b4caab7dd9a3cac947052)
+
 ## 🛠 Installation & Set Up
 
 If you dont have node install on your computer, Install node js from [here](https://nodejs.org/en) as your JavaScript Runtime Engine
