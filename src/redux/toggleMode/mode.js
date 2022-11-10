@@ -1,6 +1,6 @@
 const TOGGLE_MODE = 'TOGGLE_MODE';
 const initialState = {
-  isDarkMode: true,
+  isDarkMode: false,
 };
 export default function toggleModeReducer(state = initialState, action) {
   switch (action.type) {
