@@ -12,6 +12,7 @@ const Homepage = () => {
   const theme = useTheme();
   const countries = useSelector((state) => state.countries);
   const selectedContinent = useSelector((state) => state.selectedContinent);
+  // console.log(selectedContinent);
   const dispatch = useDispatch();
   React.useEffect(() => {
     dispatch(getCountriesFromServer(selectedContinent));
@@ -37,8 +38,8 @@ const Homepage = () => {
         },
       }}
       >
-        <SearchInput />
         <SelectContinent continent={selectedContinent} />
+        <SearchInput />
       </Stack>
       <Stack sx={{
         mt: '2rem',
@@ -56,6 +57,7 @@ const Homepage = () => {
         {
           countries
             ? countries.map((country) => (
+            // eslint-disable-next-line react/jsx-key
               <CountryCards
                 name={country.name}
                 flag={country.flag}
@@ -67,8 +69,6 @@ const Homepage = () => {
                 currencies={country.currencies}
                 subregion={country.subregion}
                 topLevelDomain={country.topLevelDomain}
-                borders={country.borders}
-                code={country.cca3}
                 key={uuidv4()}
               />
             ))

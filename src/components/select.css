@@ -1,6 +1,5 @@
 /* :root {
   --select-options-navbar-main-color: white;
-  --select-options-navbar-main-color-dark: hsl(200, 15%, 8%);
 }
 
 .select-options-navbar-main-color div {
@@ -9,37 +8,16 @@
   color: var(--select-options-navbar-main-color) !important;
 }
 
-body.dark .select-options-navbar-main-color div {
-  background-color: hsl(0, 0%, 100%) !important;
-  color: var(--select-options-navbar-main-color-dark) !important;
-}
-
 .select-options-navbar-main-color::before {
   border-color: var(--select-options-navbar-main-color) !important;
-}
-
-body.dark .select-options-navbar-main-color::before {
-  border-color: var(--select-options-navbar-main-color-dark) !important;
 }
 
 .select-options-navbar-main-color::after {
   border-color: var(--select-options-navbar-main-color) !important;
 }
 
-body.dark .select-options-navbar-main-color::after {
-  border-color: var(--select-options-navbar-main-color-dark) !important;
-}
-
 .select-options-navbar-main-color:not(.Mui-disabled):hover::before {
   border-color: var(--select-options-navbar-main-color) !important;
-}
-
-body.dark .select-options-navbar-main-color:not(.Mui-disabled):hover::before {
-  border-color: var(--select-options-navbar-main-color-dark) !important;
-}
-
-body.dark .select-options-navbar-main-color svg {
-  fill: var(--select-options-navbar-main-color-dark) !important;
 }
 
 .select-options-navbar-main-color svg {
@@ -93,19 +71,4 @@ body.dark .select-options-navbar-main-color svg {
 
 .css-6hp17o-MuiList-root-MuiMenu-list {
   background-color: #a53560 !important;
-}
-
-body.dark .Mui-selected {
-  color: #202c37 !important;
-  background-color: hsl(0, 0%, 100%) !important;
-}
-
-body.dark .css-uigbjl-MuiButtonBase-root-MuiMenuItem-root.Mui-selected:hover {
-  color: #202c37 !important;
-  background-color: hsl(0, 0%, 100%) !important;
-}
-
-body.dark .css-6hp17o-MuiList-root-MuiMenu-list {
-  color: #202c37 !important;
-  background-color: hsl(0, 0%, 100%) !important;
 }
