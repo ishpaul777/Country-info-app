@@ -20,9 +20,10 @@ const Homepage = () => {
     <Box
       component="main"
       sx={{
+        mt: '2rem',
         p: '2rem 4rem',
         [theme.breakpoints.down('sm')]: {
-          p: '2rem',
+          p: '0rem',
         },
       }}
     >
@@ -44,12 +45,12 @@ const Homepage = () => {
         flexWrap: 'wrap',
         flexDirection: 'row',
         justifyContent: 'center',
-        gap: '3rem',
-        [theme.breakpoints.down('sm')]: {
-          flexDirection: 'column',
-          alignItems: 'center',
-          gap: '2rem',
-        },
+        // gap: '3rem',
+        // [theme.breakpoints.down('sm')]: {
+        //   flexDirection: 'column',
+        //   alignItems: 'center',
+        //   gap: '2rem',
+        // },
       }}
       >
         {
