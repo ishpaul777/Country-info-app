@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 import {
   Card, CardMedia, CardContent, Typography, useTheme,
@@ -8,9 +9,8 @@ import { PropTypes } from 'prop-types';
 const CountryCards = (props) => {
   const theme = useTheme();
   const {
-    name, flag, population, continents,
+    name, flag, population, continents, capital,
   } = props;
-  // console.log(props);
   return (
     <Link
       to={`/countries/${name}`}
@@ -21,14 +21,14 @@ const CountryCards = (props) => {
         sx={{
           width: '20vw',
           textAlign: 'left',
-          color: '#fff',
+          color: theme.palette.text.primary,
           backgroundColor: 'secondary.main',
           cursor: 'pointer',
           [theme.breakpoints.down('md')]: {
             width: '35vw',
           },
           [theme.breakpoints.down('sm')]: {
-            width: '50vw',
+            width: '75vw',
           },
         }}
       >
@@ -57,13 +57,13 @@ const CountryCards = (props) => {
               {continents}
             </span>
           </Typography>
-          {/* <Typography variant="subtitle1" component="p" sx={{ fontWeight: 500 }}>
+          <Typography variant="subtitle1" component="p" sx={{ fontWeight: 500 }}>
             Capital:
             <span style={{ fontWeight: 400 }}>
               {' '}
               {capital}
             </span>
-          </Typography> */}
+          </Typography>
         </CardContent>
       </Card>
     </Link>
