@@ -1,15 +1,15 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 import {
-  Card, CardContent, IconButton, Typography, useTheme,
+  Card, CardMedia, CardContent, Typography, useTheme,
 } from '@mui/material';
-import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
 import { Link } from 'react-router-dom';
 import { PropTypes } from 'prop-types';
 
 const CountryCards = (props) => {
   const theme = useTheme();
   const {
-    name, population, continents, subregion,
+    name, flag, population, continents, capital,
   } = props;
   return (
     <Link
@@ -21,36 +21,25 @@ const CountryCards = (props) => {
         sx={{
           width: '20vw',
           textAlign: 'left',
-          height: '30vh',
-          color: '#fff',
-          backgroundColor: 'primary.main',
+          color: theme.palette.text.primary,
+          backgroundColor: 'secondary.main',
           cursor: 'pointer',
           [theme.breakpoints.down('md')]: {
             width: '35vw',
           },
           [theme.breakpoints.down('sm')]: {
-            width: '48vw',
-            height: '30vh',
-            margin: '.2rem',
+            width: '75vw',
           },
         }}
       >
-        {/* <CardMedia
+        <CardMedia
           component="img"
           height="200"
           width="200"
           image={flag}
           alt="flag"
-        /> */}
+        />
         <CardContent>
-          <IconButton
-            sx={{
-              float: 'right',
-              p: 0,
-            }}
-          >
-            <ArrowCircleRightIcon />
-          </IconButton>
           <Typography gutterBottom variant="h5" component="h2">
             {name}
           </Typography>
@@ -69,10 +58,10 @@ const CountryCards = (props) => {
             </span>
           </Typography>
           <Typography variant="subtitle1" component="p" sx={{ fontWeight: 500 }}>
-            Sub Region:
+            Capital:
             <span style={{ fontWeight: 400 }}>
               {' '}
-              {subregion}
+              {capital}
             </span>
           </Typography>
         </CardContent>
@@ -83,8 +72,7 @@ const CountryCards = (props) => {
 
 CountryCards.propTypes = {
   name: PropTypes.string.isRequired,
-  // eslint-disable-next-line react/require-default-props
-  subregion: PropTypes.string,
+  flag: PropTypes.string.isRequired,
   population: PropTypes.number.isRequired,
   continents: PropTypes.arrayOf(PropTypes.string).isRequired,
 };

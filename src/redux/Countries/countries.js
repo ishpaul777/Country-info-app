@@ -29,7 +29,9 @@ export const getCountriesFromServer = (filter) => async (dispatch) => {
     languages: country.languages,
     nativeName: country.name.nativeName,
     topLevelDomain: country.tld,
+    borders: country.borders,
     currencies: country.currencies,
+    code: country.cca3,
   }));
   const sortedCountries = countries.sort((a, b) => a.name.localeCompare(b.name));
   dispatch({
@@ -52,6 +54,8 @@ export const searchCountries = (countryName) => async (dispatch) => {
     nativeName: country.name.nativeName,
     topLevelDomain: country.tld,
     currencies: country.currencies,
+    borders: country.borders,
+    code: country.cca3,
   }));
   const sortedCountries = countries.sort((a, b) => a.name.localeCompare(b.name));
   dispatch({

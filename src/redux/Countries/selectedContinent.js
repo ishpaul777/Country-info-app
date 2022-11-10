@@ -1,6 +1,6 @@
 const SET_CONTINENT = 'SET_CONTINENT';
 
-const initialState = 'all';
+const initialState = 'region/oceania';
 export default function setContinentReducer(state = initialState, action) {
   switch (action.type) {
     case (SET_CONTINENT): {

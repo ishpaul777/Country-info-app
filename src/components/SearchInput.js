@@ -2,10 +2,12 @@
 import InputBase from '@mui/material/InputBase';
 import { styled } from '@mui/material/styles';
 import { useDispatch } from 'react-redux';
+import { useTheme } from '@emotion/react';
 import SearchIcon from '@mui/icons-material/Search';
 import { searchCountries } from '../redux/Countries/countries';
 
 const SearchInput = () => {
+  const theme = useTheme();
   const dispatch = useDispatch();
   const Search = styled('div')(({ theme }) => ({
     // color: 'primary',
@@ -13,9 +15,8 @@ const SearchInput = () => {
     position: 'relative',
     alignSelf: 'center',
     borderRadius: '5px',
-    // background: 'hsl(209, 23%, 22%)',
-    background: '#ec4c8a',
-    // border: '1px solid #ec4c8a',
+    background: theme.palette.secondary.main,
+    boxShadow: theme.shadows[2],
     width: '20vw',
     [theme.breakpoints.down('md')]: {
       width: '75vw',
@@ -35,14 +36,13 @@ const SearchInput = () => {
   const StyledInputBase = styled(InputBase)(({ theme }) => ({
     // color: 'primary',
     '& .MuiInputBase-input': {
-      color: '#fff',
+      color: theme.palette.text.primary,
       padding: '10px',
       // vertical padding + font size from searchIcon
       //   transition: theme.transitions.create('width'),
       width: '100%',
-      '&: placeholder': {
-        color: '#fff',
-        // color: '#eee',
+      '&::placeholder': {
+        color: theme.palette.text.primary,
       },
       [theme.breakpoints.down('md')]: {
         width: '70%',
@@ -57,7 +57,7 @@ const SearchInput = () => {
   return (
     <Search>
       <SearchIconWrapper>
-        <SearchIcon style={{ fill: '#fff' }} />
+        <SearchIcon style={{ fill: theme.palette.text.primary }} />
       </SearchIconWrapper>
       <StyledInputBase
         placeholder="Search…"
