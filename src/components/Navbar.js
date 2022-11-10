@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import React from 'react';
 import WbSunnyIcon from '@mui/icons-material/WbSunny';
 import { useTheme } from '@emotion/react';

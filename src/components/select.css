@@ -33,6 +33,7 @@ body.dark .select-options-navbar-main-color::after {
 .select-options-navbar-main-color:not(.Mui-disabled):hover::before {
   border-color: var(--select-options-navbar-main-color) !important;
 }
+
 body.dark .select-options-navbar-main-color:not(.Mui-disabled):hover::before {
   border-color: var(--select-options-navbar-main-color-dark) !important;
 }
@@ -58,7 +59,7 @@ body.dark .select-options-navbar-main-color svg {
 }
 
 body.dark .Mui-selected {
-  color: #202c37  !important;
+  color: #202c37 !important;
   background-color: hsl(0, 0%, 100%) !important;
 }
 
