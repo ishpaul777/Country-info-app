@@ -31,9 +31,9 @@ function SelectContinent({ continent }) {
             value="all"
             sx={{
               backgroundColor: 'secondary.main',
-              color: 'text.primary',
+              color: '#fff',
               '&:hover': {
-                color: 'text.primary',
+                color: '#fff',
                 backgroundColor: 'primary.main',
               },
               '&:focus': {
@@ -48,13 +48,13 @@ function SelectContinent({ continent }) {
             value="region/asia"
             sx={{
               backgroundColor: 'secondary.main',
-              color: 'text.primary',
+              color: '#fff',
               '&:hover': {
-                color: 'text.primary',
+                color: '#fff',
                 backgroundColor: 'primary.main',
               },
               '&:focus': {
-                color: 'text.primary',
+                color: '#fff',
                 backgroundColor: 'primary.main',
               },
             }}
@@ -65,9 +65,9 @@ function SelectContinent({ continent }) {
             value="region/america"
             sx={{
               backgroundColor: 'secondary.main',
-              color: 'text.primary',
+              color: '#fff',
               '&:hover': {
-                color: 'text.primary',
+                color: '#fff',
                 backgroundColor: 'primary.main',
               },
               '&:focus': {
@@ -81,13 +81,13 @@ function SelectContinent({ continent }) {
             value="region/europe"
             sx={{
               backgroundColor: 'secondary.main',
-              color: 'text.primary',
+              color: '#fff',
               '&:hover': {
-                color: 'text.primary',
+                color: '#fff',
                 backgroundColor: 'primary.main',
               },
               '&:focus': {
-                color: 'text.primary',
+                color: '#fff',
                 backgroundColor: 'primary.main',
               },
             }}
@@ -99,13 +99,13 @@ function SelectContinent({ continent }) {
             value="region/oceania"
             sx={{
               backgroundColor: 'secondary.main',
-              color: 'text.primary',
+              color: '#fff',
               '&:hover': {
-                color: 'text.primary',
+                color: '#fff',
                 backgroundColor: 'primary.main',
               },
               '&:focus': {
-                color: 'text.primary',
+                color: '#fff',
                 backgroundColor: 'primary.main',
               },
             }}
@@ -116,13 +116,13 @@ function SelectContinent({ continent }) {
             value="region/africa"
             sx={{
               backgroundColor: 'secondary.main',
-              color: 'text.primary',
+              color: '#fff',
               '&:hover': {
-                color: 'text.primary',
+                color: '#fff',
                 backgroundColor: 'primary.main',
               },
               '&:focus': {
-                color: 'text.primary',
+                color: '#fff',
                 backgroundColor: 'primary.main',
               },
             }}

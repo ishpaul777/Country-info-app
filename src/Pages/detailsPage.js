@@ -1,11 +1,9 @@
-/* eslint-disable no-unused-vars */
 import React from 'react';
 import {
-  Box, Stack, Button, Typography,
+  Box, Stack, Typography,
 } from '@mui/material';
-import { Link, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 import { useTheme } from '@emotion/react';
-import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
 const DetailsPage = () => {
   const theme = useTheme();
@@ -21,100 +19,87 @@ const DetailsPage = () => {
     continents,
     subregion,
     topLevelDomain,
-    borders,
   } = (location.state);
   const languageArray = Object.values(languages);
   const nativeNameArray = Object.values(nativeName);
   const currenciesArray = Object.values(currencies);
-  const regionNames = new Intl.DisplayNames(
-    ['en'], { type: 'region' },
-  );
+  //   console.log();
   return (
     <div>
       <Box sx={{
-        // p: 5,
-        pt: 15,
+        pt: 10,
         display: 'flex',
         flexDirection: 'row',
-        [theme.breakpoints.down('md')]: {
-          flexDirection: 'column',
-          alignItems: 'flex-start',
-        },
         alignItems: 'center',
         justifyContent: 'space-evenly',
+        [theme.breakpoints.down('sm')]: {
+          pt: 5,
+          flexDirection: 'column',
+          alignItems: 'center',
+          gap: '2rem',
+        },
       }}
       >
-        <Link
-          to="/"
-          style={{
-            position: 'absolute',
-            top: '6rem',
-            left: '2rem',
-            textDecoration: 'none',
-            alignSelf: 'start',
+        <Stack
+          sx={{
+            [theme.breakpoints.down('sm')]: {
+              display: 'none',
+            },
           }}
         >
-          <Button variant="contained" color="secondary" startIcon={<ArrowBackIcon />}>
-            Home
-          </Button>
-        </Link>
-        <Stack sx={{
-          width: '40vw',
-          height: '50vh',
-          [theme.breakpoints.down('md')]: {
-            width: '70vw',
-            height: '43vh',
-            alignSelf: 'center',
-          },
-          [theme.breakpoints.down('sm')]: {
-            height: '30vh',
-          },
-        }}
-        >
-          {/* (theme.breakpoints.down('md')) ? console.log('hello') : console.log('hii') */}
           <img
             style={{
-              width: '100%',
-              height: '100%',
+              width: '33vw',
+              height: '48vh',
+              padding: '2rem',
             }}
             src={flag}
             alt={name}
           />
         </Stack>
-        <Stack sx={{
-          textAlign: 'left',
-          width: '50%',
-          p: 4,
-          [theme.breakpoints.down('md')]: {
-            pt: 15,
-          },
-          [theme.breakpoints.down('sm')]: {
-            pt: 5,
-          },
-        }}
+        <Stack
+          sx={{
+            [theme.breakpoints.up('sm')]: {
+              display: 'none',
+            },
+          }}
         >
-          {/* color: theme.palette.,
-          color: theme.palette.text.primary, */}
-          <Typography variant="h4" component="h1" color="text.primary" sx={{ fontWeight: 700, pb: 2 }}>
+          <img
+            style={{
+              width: '90vw',
+              height: '40vh',
+              padding: '2rem',
+            }}
+            src={flag}
+            alt={name}
+          />
+        </Stack>
+        <Stack sx={{ textAlign: 'left', p: 4 }}>
+          <Typography variant="h4" color="white" component="h1" sx={{ fontWeight: 700, pb: 2 }}>
             {name}
           </Typography>
           <Stack sx={{
             display: 'flex',
+            flexDirection: 'row',
             alignItems: 'flex-start',
             gap: '100px',
-            flexDirection: 'row',
-            [theme.breakpoints.down('sm')]: {
-              flexDirection: 'column',
-              gap: '20px',
-            },
           }}
           >
             <Stack>
               <Typography
                 variant="h6"
-                color="text.primary"
+                color="white"
                 component="li"
-                sx={{ fontWeight: 600, listStyle: 'none', fontSize: '1.1rem' }}
+                sx={{
+                  fontWeight: 600,
+                  width: '80vw',
+                  p: 2,
+                  borderRadius: '8px',
+                  listStyle: 'none',
+                  background: '#ef6fa1',
+                  fontSize: '1.1rem',
+                  mb: 1,
+                }}
               >
                 Native Name:
                 <span style={{ fontWeight: 400 }}>
@@ -122,110 +107,160 @@ const DetailsPage = () => {
                   {nativeNameArray[0].official}
                 </span>
               </Typography>
-              <Typography variant="h6" color="text.primary" component="li" sx={{ fontWeight: 600, listStyle: 'none', fontSize: '1.1rem' }}>
+              <Typography
+                variant="h6"
+                color="white"
+                component="li"
+                sx={{
+                  fontWeight: 600,
+                  width: '80vw',
+                  p: 2,
+                  borderRadius: '8px',
+                  listStyle: 'none',
+                  background: '#ef6fa1',
+                  fontSize: '1.1rem',
+                  mb: 1,
+                }}
+              >
                 Population:
                 <span style={{ fontWeight: 400 }}>
                   {' '}
                   {population.toLocaleString()}
                 </span>
               </Typography>
-              <Typography variant="h6" color="text.primary" component="li" sx={{ fontWeight: 600, listStyle: 'none', fontSize: '1.1rem' }}>
+              <Typography
+                variant="h6"
+                color="white"
+                component="li"
+                sx={{
+                  fontWeight: 600,
+                  width: '80vw',
+                  p: 2,
+                  borderRadius: '8px',
+                  listStyle: 'none',
+                  background: '#ef6fa1',
+                  fontSize: '1.1rem',
+                  mb: 1,
+                }}
+              >
                 Region:
                 <span style={{ fontWeight: 400 }}>
                   {' '}
                   {continents}
                 </span>
               </Typography>
-              <Typography variant="h6" color="text.primary" component="li" sx={{ fontWeight: 600, listStyle: 'none', fontSize: '1.1rem' }}>
+              <Typography
+                variant="h6"
+                color="white"
+                component="li"
+                sx={{
+                  fontWeight: 600,
+                  width: '80vw',
+                  p: 2,
+                  borderRadius: '8px',
+                  listStyle: 'none',
+                  background: '#ef6fa1',
+                  fontSize: '1.1rem',
+                  mb: 1,
+                }}
+              >
                 Sub Region:
                 <span style={{ fontWeight: 400 }}>
                   {' '}
                   {subregion}
                 </span>
               </Typography>
-              <Typography variant="h6" color="text.primary" component="li" sx={{ fontWeight: 600, listStyle: 'none', fontSize: '1.1rem' }}>
+              <Typography
+                variant="h6"
+                color="white"
+                component="li"
+                sx={{
+                  fontWeight: 600,
+                  width: '80vw',
+                  p: 2,
+                  borderRadius: '8px',
+                  listStyle: 'none',
+                  background: '#ef6fa1',
+                  fontSize: '1.1rem',
+                  mb: 1,
+                }}
+              >
                 Capital:
                 <span style={{ fontWeight: 400 }}>
                   {' '}
                   {capital[0]}
                 </span>
               </Typography>
-            </Stack>
-            <Stack>
-              <Typography variant="h6" color="text.primary" component="li" sx={{ fontWeight: 600, listStyle: 'none', fontSize: '1.1rem' }}>
+              <Typography
+                variant="h6"
+                color="white"
+                component="li"
+                sx={{
+                  fontWeight: 600,
+                  width: '80vw',
+                  p: 2,
+                  borderRadius: '8px',
+                  listStyle: 'none',
+                  background: '#ef6fa1',
+                  fontSize: '1.1rem',
+                  mb: 1,
+                }}
+              >
                 Currency:
                 <span style={{ fontWeight: 400 }}>
                   {' '}
-                  {currenciesArray[0].name}
-                  {'  '}
-                  &apos;
                   {currenciesArray[0].symbol}
-                  &apos;
+                  {'  '}
+                  {currenciesArray[0].name}
                   {' '}
                 </span>
               </Typography>
-              <Typography variant="h6" color="text.primary" component="li" sx={{ fontWeight: 600, listStyle: 'none', fontSize: '1.1rem' }}>
+              <Typography
+                variant="h6"
+                color="white"
+                component="li"
+                sx={{
+                  fontWeight: 600,
+                  width: '80vw',
+                  p: 2,
+                  borderRadius: '8px',
+                  listStyle: 'none',
+                  background: '#ef6fa1',
+                  fontSize: '1.1rem',
+                  mb: 1,
+                }}
+              >
                 Languages:
                 <span style={{ fontWeight: 400 }}>
                   {' '}
                   {languageArray.join(', ')}
                 </span>
               </Typography>
-              <Typography variant="h6" color="text.primary" component="li" sx={{ fontWeight: 600, listStyle: 'none', fontSize: '1.1rem' }}>
+              <Typography
+                variant="h6"
+                color="white"
+                component="li"
+                sx={{
+                  fontWeight: 600,
+                  width: '80vw',
+                  p: 2,
+                  borderRadius: '8px',
+                  listStyle: 'none',
+                  background: '#ef6fa1',
+                  fontSize: '1.1rem',
+                  mb: 1,
+                }}
+              >
                 Top Level Domain:
                 <span style={{ fontWeight: 400 }}>
                   {' '}
                   &apos;
                   {topLevelDomain}
-                  {' '}
                   &apos;
                 </span>
               </Typography>
             </Stack>
           </Stack>
-          {
-            (borders)
-            && (
-            <Stack sx={{
-              mt: 4,
-              width: '60%',
-              flexWrap: 'wrap',
-              display: 'flex',
-              alignItems: 'center',
-              flexDirection: 'row',
-              gap: '1rem',
-            }}
-            >
-              <Typography
-                variant="h6"
-                color="text.primary"
-                component="li"
-                sx={{ fontWeight: 600, listStyle: 'none', fontSize: '1.1rem' }}
-              >
-                Borders:
-              </Typography>
-              {
-                borders.map((country) => (
-                  <Button
-                    variant="contained"
-                    color="secondary"
-                    key={country}
-                    sx={{
-                      p: 2,
-                      pt: 1,
-                      pb: 1,
-                      width: 'fit-content',
-                    }}
-                  >
-                    {country}
-                  </Button>
-                ))
-              }
-
-            </Stack>
-            )
-          }
-
         </Stack>
       </Box>
     </div>
